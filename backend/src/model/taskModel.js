@@ -9,6 +9,6 @@ const TaskSchema = new Schema({
     when:{type: Date, required: true},
     done:{type: Boolean, default: false},
     created:{type: Date, default: Date.now()}
-});
+})
 
-module.exports = mongoose.model('Task', TaskSchema); //o primeiro param é como será salvo no bd e o segundo é o obj criado neste arq
+module.exports = mongoose.model('Task', TaskSchema) //o primeiro param é como será salvo no bd e o segundo é o obj criado neste arq
