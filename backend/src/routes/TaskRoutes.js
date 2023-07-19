@@ -12,6 +12,7 @@ router.get('/filter/late', MacAddressValidation, TaskController.late)
 router.get('/filter/today', MacAddressValidation, TaskController.today)
 router.get('/filter/week', MacAddressValidation, TaskController.today)
 router.get('/filter/month', MacAddressValidation, TaskController.month)
+router.get('/filter/year', MacAddressValidation, TaskController.year)
 router.put('/:id', TaskController.update) // ':id' (dois pontos) indica uma variável, de nome 'id'
 router.put('/:id/:done', TaskController.done) 
 router.delete('/:id', TaskController.delete) 
