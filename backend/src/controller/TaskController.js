@@ -12,6 +12,19 @@ class TaskController {
                 return res.status(500).json(error)
             }) 
     }
+
+    async update(req, res){
+        await TaskModel.findByIdAndUpdate({'_id': req.params.id}, //req.params - obtém o conteúdo fornecido pela requisição (variável '_id'), ao invés do corpo (body) 
+                                                  req.body, 
+                                                  {new: true}) //devolve a nova tarefa, atualizada (conforme requisição)
+        .then(response => {
+            return res.status(200).json(response)
+        })
+        .catch(error => {
+            return res.status(500).json(error)
+        })
+    }
+
 }
 
 module.exports = new TaskController()
