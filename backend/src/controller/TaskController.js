@@ -46,7 +46,17 @@ class TaskController {
             })
             .catch(error => {
                 return res.status(500).json(error)
-            });
+            })
+    }
+
+    async delete (req, res){
+        await TaskModel.deleteOne({'_id': req.params.id}) //'_id' - o '_' indica que é uma variável 
+            .then(response => {
+                return res.status(200).json(response)
+            })
+            .catch(error => {
+                return res.status(500).json(error)
+            })
     }
 
 }
