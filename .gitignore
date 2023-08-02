@@ -1,0 +1,4 @@
+*.txt
+backend/node_modules/
+backend/Rotas_API_Insomnia.json
+.env
