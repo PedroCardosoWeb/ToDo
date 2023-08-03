@@ -1,4 +1,6 @@
 const express =  require('express') //importa o módulo express no arquivo
+require('dotenv').config()
+
 const server = express() //inicializa o express em server
 server.use(express.json())
 
